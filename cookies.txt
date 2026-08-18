@@ -1,0 +1,15 @@
+YDL_OPTS = {
+    'format': 'bestaudio/best',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
+    'outtmpl': os.path.join(tempfile.gettempdir(), '%(title)s.%(ext)s'),
+    'quiet': True,
+    'no_warnings': True,
+    'cookiefile': 'cookies.txt',  # Thêm dòng này
+    'extract_flat': False,
+    'ignoreerrors': True,
+    'no_check_certificate': True,
+  }
